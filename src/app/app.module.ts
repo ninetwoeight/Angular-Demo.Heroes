@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule,ReactiveFormsModule } from '@angular/forms'; // <-- NgModel lives here
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
@@ -12,8 +12,12 @@ import { HeroService } from './hero.service';
 import { MessagesComponent } from './messages/messages.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HeroSearchComponent} from './hero-search/hero-search.component';
+import {PowerBoosterComponent} from './pipe/power-booster/power-booster.component';
 import { MessageService } from './message.service';
 import {InMemoryDataService} from './in-memory-data.service';
+import {exponentialStrength} from './pipe/expoenetial-strenght.pipe';
+import { ProfileFormComponent } from './profile-form/profile-form.component';
+import {PageNotfoundComponent} from './page-notfound/page-notfound.component';
 
 
 @NgModule({
@@ -23,11 +27,20 @@ import {InMemoryDataService} from './in-memory-data.service';
       HeroDetailComponent,
       MessagesComponent,
       DashboardComponent,
-      HeroSearchComponent
+      HeroSearchComponent,
+      PowerBoosterComponent,
+      PageNotfoundComponent,
+
+      // custom pipe 
+      exponentialStrength,
+
+      ProfileFormComponent,
+
    ],
    imports: [
       BrowserModule,
       FormsModule,
+      ReactiveFormsModule,
       AppRoutingModule,
       HttpClientModule,
       HttpClientInMemoryWebApiModule.forRoot(
