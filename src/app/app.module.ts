@@ -5,6 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {HeroesRoutingModule} from './heros-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -46,6 +47,7 @@ import {PageNotfoundComponent} from './page-notfound/page-notfound.component';
       HeroesRoutingModule,  // in order of imports 
       AppRoutingModule,
 
+      BrowserAnimationsModule,
 
       HttpClientModule,
       HttpClientInMemoryWebApiModule.forRoot(

@@ -3,7 +3,9 @@
     <a routerLink="/dashboard">Dashboard</a>
     <a routerLink="/heroes">Heroes</a>
 </nav>
+<div [@routeAnimation]="getAnimationData(routerOutlet)">   <!-- 路由导航动画-->
 <router-outlet></router-outlet>
+</div>
 <app-power-booster></app-power-booster> <!-- pipe funcation -->
 <app-profile-form></app-profile-form> <!--reactive forms-->
 <app-messages></app-messages>
