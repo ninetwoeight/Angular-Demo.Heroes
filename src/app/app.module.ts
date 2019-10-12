@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms'; // <-- NgModel lives here
 import {AppRoutingModule} from './app-routing.module';
+import {HeroesRoutingModule} from './heros-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 
@@ -41,7 +42,11 @@ import {PageNotfoundComponent} from './page-notfound/page-notfound.component';
       BrowserModule,
       FormsModule,
       ReactiveFormsModule,
+
+      HeroesRoutingModule,  // in order of imports 
       AppRoutingModule,
+
+
       HttpClientModule,
       HttpClientInMemoryWebApiModule.forRoot(
          InMemoryDataService,{dataEncapsulation:false}
